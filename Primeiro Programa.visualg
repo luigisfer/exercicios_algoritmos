@@ -1,0 +1,14 @@
+algoritmo "Programa que calcula o frete de uma compra"
+
+var
+  precoBase, totalPreco: real
+inicio
+
+  escreval("Qual é foi o total da compra do seu carrinho?")
+  leia(precoBase)
+
+  totalPreco <- precoBase+10
+
+  escreval("Com o adicional de R$10 de frete, a sua compra deu: ", totalPreco)
+
+fimalgoritmo
