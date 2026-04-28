@@ -1,0 +1,52 @@
+algoritmo "Programa que faz a operação de dois números"
+
+var
+  n1, n2: real
+  soma, subtracao, divisao, multiplicacao: real
+  resposta: inteiro
+
+inicio
+
+  escreval("Olá, bem vindo a calculadora de operações aritméricas baseadas em dois números!")
+  escreval("Escolha qual operação você deseja realizar: ")
+  escreval("Digite 1 para Soma")
+  escreval("Digite 2 para Subtração")
+  escreval("Digite 3 para Divisão")
+  escreval("Digite 4 para Multiplicação")
+
+  leia(resposta)
+
+  se (resposta > 4 OU resposta < 1) entao //Verificação da resposta para saber se é válida com as opções
+    escreva ("Número inválido")
+  senao
+    escreval("Você digitou: ", resposta)
+
+    escreval("Agora vamos calcular. Comece digitando o primeiro número: ")
+    leia(n1)
+    escreval("Agora digite o segundo número: ")
+    leia(n2)
+
+    escreval("Certo! você digitou, ", n1, " e ", n2, ".")
+
+    se (resposta = 1) entao
+      soma <- n1 + n2
+      escreval("O resultado da operação é: ", soma)
+    senao se (resposta = 2) entao
+      subtracao <- n1 - n2
+      escreval("O resultado da operação é: ", subtracao)
+    senao se (resposta = 3) entao
+      se (n2 = 0) entao
+      escreval("Não é possível dividir por 0")
+      senao 
+      divisao <- n1 / n2
+      escreval("O resultado da operação é: ", divisao)
+      fimse
+
+    senao
+      multiplicacao <- n1 * n2
+      escreval("O resultado da operação é: ", multiplicacao)
+    fimse
+  fimse
+fimse
+fimse
+fimalgoritmo
