@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class domDeTrocaDeLetra {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        String respostaSN, frase;
+
+        System.out.println("Olá! Eu tenho um dom de trocar todas as letras 'a' de uma frase para a letra 'e' quer ver?");
+        System.out.println("Digite S para sim. \nDigite N para não.");
+        respostaSN = leitor.next();
+        respostaSN = respostaSN.toUpperCase();// Padronizo para que o valor seja MAIÚSCULO para fazer a validação
+        leitor.nextLine();
+
+        if (respostaSN.equals("N")) { // Para comparar dois valores contidos em uma String usamos:
+                                      // variavel.equals("conteudo");
+            System.out.println("Tudo bem até mais!");
+
+        } else {
+            System.out.println("Ótimo! Vamos nessa então.\nDigite para mim qualquer frase:");
+            frase = leitor.nextLine();
+
+            System.out.println("Certo agora vou usar o meu dom para mudar todas as letras 'a' para 'e'");
+
+            System.out.println(frase.replace("a", "e"));
+        }
+
+        leitor.close();
+    }
+
+}
